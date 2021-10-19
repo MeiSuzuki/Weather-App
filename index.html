@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <title>W2HW_Wireframe</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="border rounded">
+        <header>
+          <ul class="world_clock">
+            <li class="city_clock">
+              🇬🇧London
+              <br />
+              <div class="emoji">🕔</div>
+            </li>
+            <li class="city_clock">
+              🇯🇵Tokyo
+              <br />
+              <div class="emoji">🕚</div>
+            </li>
+            <li class="city_clock">
+              🇺🇸New York
+              <br />
+              <div class="emoji">🕙</div>
+            </li>
+            <li class="city_clock">
+              🇫🇷Paris
+              <br />
+              <div class="emoji">🕐</div>
+            </li>
+            <li class="city_clock">
+              🇦🇺Sydney
+              <br />
+              <div class="emoji">🕒</div>
+            </li>
+          </ul>
+        </header>
+        <section>
+          <div class="card" style="max-width: 600px">
+            <div class="card-body">
+              <form class="row" id="search-form">
+                <div class="col-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter a city"
+                    id="input-city"
+                  />
+                </div>
+                <div class="col-2" id="search-button">
+                  <input
+                    type="submit"
+                    value="Search"
+                    class="btn btn-primary mb-2.4"
+                  />
+                </div>
+                <div class="col-12 currentLocation">
+                  <input
+                    type="button"
+                    value="Current location"
+                    class="btn btn-success"
+                    id="current-location"
+                  />
+                </div>
+              </form>
+              <div class="row weather">
+                <div class="col-12 cityAndWeather">
+                  <h1 class="cityName" id="output-city">Search for weather!</h1>
+                  <div class="dateTime" id="current-date"></div>
+                  <div class="weather_status" id="description">
+                    Weather description here
+                  </div>
+                </div>
+                <div class="col-6 todaysWeather">
+                  <img
+                    src="images/sunnyCloud.svg"
+                    alt="Mostly Sunny"
+                    class="mostlySunnyIcon"
+                  />
+                  <div class="temperature" id="current-temp">28</div>
+                  <span class="units" id="temp-units">
+                    <a href="#" id="celsius-temp-unit">°C</a>
+                    |
+                    <a href="#" id="fahrenheit-temp-unit">°F</a>
+                  </span>
+                  <div class="temperatureRange">
+                    <span class="maxTemp" id="max-temp"> 29° </span>
+                    /
+                    <span id="min-temp"> 20° </span>
+                  </div>
+                </div>
+                <div class="col-6 more">
+                  <div class="border rounded">
+                    <div class="humidity" id="humidity-percentage">
+                      Humidity: 80%
+                    </div>
+                    <div class="wind" id="wind-speed">Wind: 2m/sec</div>
+                  </div>
+                </div>
+              </div>
+              <ul class="futureWeather">
+                <li class="future">
+                  <div class="dayOfWeek">Tue</div>
+                  <div class="futureDate">9/14</div>
+                  <img
+                    src="images/sunnyCloud.svg"
+                    alt="Mostly Sunny"
+                    class="futureIcon"
+                  />
+                  <br />
+                  <small> 27°/20° </small>
+                </li>
+                <li class="future">
+                  <div class="dayOfWeek">Wed</div>
+                  <div class="futureDate">9/15</div>
+                  <img
+                    src="images/sunnyCloud.svg"
+                    alt="Mostly Sunny"
+                    class="futureIcon"
+                  />
+                  <br />
+                  <small> 28°/20° </small>
+                </li>
+                <li class="future">
+                  <div class="dayOfWeek">Thu</div>
+                  <div class="futureDate">9/16</div>
+                  <img
+                    src="images/sunnySmallClouds.svg"
+                    alt="Small Clouds"
+                    class="futureIcon"
+                  />
+                  <br />
+                  <small> 26°/18° </small>
+                </li>
+                <li class="future">
+                  <div class="dayOfWeek">Fri</div>
+                  <div class="futureDate">9/17</div>
+                  <img
+                    src="images/mostlyCloud.svg"
+                    alt="Cloudy"
+                    class="futureIcon"
+                  />
+                  <br />
+                  <small> 25°/19° </small>
+                </li>
+                <li class="future">
+                  <div class="dayOfWeek">Sat</div>
+                  <div class="futureDate">9/18</div>
+                  <img
+                    src="images/sunnySmallClouds.svg"
+                    alt="Small Clouds"
+                    class="futureIcon"
+                  />
+                  <br />
+                  <small> 25°/19° </small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div class="footer">
+            Open-souce code by
+            <a href="https://theviewsisee.home.blog" target="_blank">
+              Mei Suzuki
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>

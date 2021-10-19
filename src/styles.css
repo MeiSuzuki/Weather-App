@@ -1,0 +1,134 @@
+.border {
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 5px 5px 6px #6f7273;
+}
+
+header ul {
+  list-style: none;
+  text-align: center;
+  margin-top: 45px;
+  padding: 0;
+}
+
+header .city_clock {
+  display: inline-block;
+  margin: 0 30px;
+  font-size: 18px;
+}
+
+header .emoji {
+  font-size: 60px;
+}
+
+section .card {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 55px;
+}
+
+section .card-body {
+  max-width: 700px;
+}
+
+section form .currentLocation {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 45px;
+}
+
+.cityAndWeather {
+  text-align: center;
+  margin-top: 50px;
+}
+.cityName {
+  text-transform: capitalize;
+}
+
+section .card-body .weather_status {
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+.mostlySunnyIcon {
+  width: 90px;
+  display: inline;
+}
+
+section .weather .todaysWeather {
+  text-align: center;
+}
+
+.temperature {
+  font-size: 50px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: 0;
+}
+
+.units {
+  position: relative;
+  font: -34px;
+}
+
+.temperatureRange {
+  text-align: center;
+  font-size: 20px;
+  color: #6f7273;
+}
+
+.maxTemp {
+  font-weight: 600;
+}
+section .more .border {
+  padding: 20px;
+  margin-top: 15px;
+  line-height: 30px;
+  font-size: 23px;
+  font-weight: lighter;
+  text-align: center;
+  box-shadow: 3px 3px 4px #6f7273;
+}
+
+section .card-body .weather {
+  margin-bottom: 30px;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section .futureWeather .future {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 5px 12px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  transition: all 200ms ease-in-out;
+}
+
+section .futureWeather .future:hover {
+  background: #eaf5e9;
+  padding: 10px 20px;
+}
+
+section .futureWeather .dayOfWeek {
+  font-size: 33px;
+  font-weight: lighter;
+}
+
+section .futureWeather .futureIcon {
+  width: 40px;
+}
+
+section .futureWeather .future small {
+  font-size: 12px;
+}
+
+footer {
+  text-align: center;
+  margin: 30px 0;
+}
