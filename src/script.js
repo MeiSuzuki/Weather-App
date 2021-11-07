@@ -87,6 +87,9 @@ let weeks = [
 let week = weeks[now.getDay()];
 let date = now.getDate();
 let hour = now.getHours();
+if (hour < 10) {
+  hour = `0${hour}`;
+}
 let minute = now.getMinutes();
 if (minute < 10) {
   minute = `0${minute}`;
