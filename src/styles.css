@@ -66,13 +66,12 @@ section .weather .todaysWeather {
 .temperature {
   font-size: 50px;
   display: inline-block;
-  vertical-align: bottom;
-  margin-bottom: 0;
+  vertical-align: middle;
 }
 
 .units {
   position: relative;
-  font: -34px;
+  font: -40px;
 }
 
 .temperatureRange {
