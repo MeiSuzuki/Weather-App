@@ -64,14 +64,16 @@ section .weather .todaysWeather {
 }
 
 .temperature {
-  font-size: 50px;
+  font-size: 58px;
   display: inline-block;
   vertical-align: middle;
 }
 
 .units {
   position: relative;
-  line-height: -34px;
+  line-height: 1;
+  top: -34px;
+  vertical-align: bottom;
 }
 
 .temperatureRange {
