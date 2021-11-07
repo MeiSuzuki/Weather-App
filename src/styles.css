@@ -72,7 +72,7 @@ section .weather .todaysWeather {
 .units {
   position: relative;
   line-height: 1;
-  top: -34px;
+  top: -56px;
   vertical-align: bottom;
 }
 
