@@ -71,7 +71,7 @@ section .weather .todaysWeather {
 
 .units {
   position: relative;
-  font: -40px;
+  line-height: -34px;
 }
 
 .temperatureRange {
