@@ -79,6 +79,7 @@ section .weather .todaysWeather {
 .temperatureRange {
   text-align: center;
   font-size: 20px;
+  line-height: 1;
   color: #6f7273;
 }
 
