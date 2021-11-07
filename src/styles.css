@@ -54,7 +54,7 @@ section .card-body .weather_status:first-letter {
   text-transform: capitalize;
 }
 
-.mostlySunnyIcon {
+section .todaysweather .currentWeatherIcon {
   width: 90px;
   display: inline;
 }
