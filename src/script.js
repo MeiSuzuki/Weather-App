@@ -24,7 +24,7 @@ function showCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity.value}&units=${unit}&appid=${apiKey}`;
 
   axios.get(apiUrl).then(showWeather);
-  
+
   if (inputCity.value) {
     searchResult.innerHTML = `${inputCity.value}`;
   } else {
@@ -40,14 +40,20 @@ function showCurrentLocationWeather(response) {
   let currentPositionDescription = document.querySelector("#description");
   let currentPositionMaxTemp = document.querySelector("#max-temp");
   let currentPositionMinTemp = document.querySelector("#min-temp");
-  let currentPositionHumidityPercentage = document.querySelector("#humidity-percentage");
+  let currentPositionHumidityPercentage = document.querySelector(
+    "#humidity-percentage"
+  );
   let currentPositionWindSpeed = document.querySelector("#wind-speed");
-  
+
   currentCityName.innerHTML = `${response.data.name}`;
   currentPositionTemp.innerHTML = Math.round(response.data.main.temp);
   currentPositionDescription.innerHTML = response.data.weather[0].description;
-  currentPositionMaxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
-  currentPositionMinTemp.innerHTML = `${Math.round(response.data.main.temp_min)}°`;
+  currentPositionMaxTemp.innerHTML = `${Math.round(
+    response.data.main.temp_max
+  )}°`;
+  currentPositionMinTemp.innerHTML = `${Math.round(
+    response.data.main.temp_min
+  )}°`;
   currentPositionHumidityPercentage.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   currentPositionWindSpeed.innerHTML = `Wind: ${response.data.wind.speed} m/sec`;
 }
@@ -69,11 +75,22 @@ function getCurrentLocation(event) {
 }
 
 let now = new Date();
-let weeks = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let weeks = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 let week = weeks[now.getDay()];
 let date = now.getDate();
 let hour = now.getHours();
 let minute = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${week}, ${date} | ${hour}:${minute}`;
 
