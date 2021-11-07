@@ -1,17 +1,22 @@
 function showWeather(response) {
   console.log(response.data);
-  let currentPositionTemp = document.querySelector("#current-temp");
+  let currentTemp = document.querySelector("#current-temp");
   let description = document.querySelector("#description");
   let maxTemp = document.querySelector("#max-temp");
   let minTemp = document.querySelector("#min-temp");
   let humidityPercentage = document.querySelector("#humidity-percentage");
   let windSpeed = document.querySelector("#wind-speed");
-  currentPositionTemp.innerHTML = Math.round(response.data.main.temp);
+  let weatherIcon = document.querySelector("#weather-icon");
+  currentTemp.innerHTML = Math.round(response.data.main.temp);
   description.innerHTML = response.data.weather[0].description;
   maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
   minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}°`;
   humidityPercentage.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   windSpeed.innerHTML = `Wind: ${response.data.wind.speed} m/sec`;
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function showCity(event) {
