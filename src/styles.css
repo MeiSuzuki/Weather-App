@@ -48,6 +48,9 @@ section form .currentLocation {
 
 section .card-body .weather_status {
   font-size: 25px;
+}
+
+section .card-body .weather_status:first-letter {
   text-transform: capitalize;
 }
 
