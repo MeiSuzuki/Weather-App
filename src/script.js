@@ -22,7 +22,7 @@ function showWeather(response) {
 function showCity(event) {
   event.preventDefault();
   let inputCity = document.querySelector("#input-city");
-  let searchResult = document.querySelector("#output-city");
+  let searchResult = document.querySelector("#search-result");
 
   let unit = "metric";
   let apiKey = "03b3d0558bec00e5c48e2704eb345cbb";
@@ -40,7 +40,7 @@ function showCity(event) {
 
 function showCurrentLocationWeather(response) {
   console.log(response.data);
-  let currentCityName = document.querySelector("#output-city");
+  let currentCityName = document.querySelector("#search-result");
   let currentPositionTemp = document.querySelector("#current-temp");
   let currentPositionDescription = document.querySelector("#description");
   let currentPositionMaxTemp = document.querySelector("#max-temp");
