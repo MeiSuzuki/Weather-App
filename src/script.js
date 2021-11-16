@@ -93,8 +93,8 @@ function convertToF(event) {
   let maxTemp = document.querySelector("#max-temp");
   let minTemp = document.querySelector("#min-temp");
   currentTemp.innerHTML = Math.round(fTemp);
-  maxTemp.innerHTML = Math.round(fMaxTemp);
-  minTemp.innerHTML = Math.round(fMinTemp);
+  maxTemp.innerHTML = `${Math.round(fMaxTemp)}°`;
+  minTemp.innerHTML = `${Math.round(fMinTemp)}°`;
 }
 
 let now = new Date();
