@@ -99,6 +99,16 @@ function convertToF(event) {
   minTemp.innerHTML = `${fMinTemp}°`;
 }
 
+function convertToC(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#current-temp");
+  let maxTemp = document.querySelector("#max-temp");
+  let minTemp = document.querySelector("#min-temp");
+  currentTemp.innerHTML = Math.round(celsiusTemperature);
+  maxTemp.innerHTML = `${Math.round(celsiusMax)}°`;
+  minTemp.innerHTML = `${Math.round(celsiusMin)}°`;
+}
+
 let now = new Date();
 let weeks = [
   "Sunday",
@@ -134,3 +144,6 @@ currentLocation.addEventListener("click", getCurrentLocation);
 
 let fConverter = document.querySelector("#fahrenheit-temp-unit");
 fConverter.addEventListener("click", convertToF);
+
+let cConverter = document.querySelector("#celsius-temp-unit");
+cConverter.addEventListener("click", convertToC);
