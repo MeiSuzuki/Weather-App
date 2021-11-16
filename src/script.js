@@ -55,6 +55,10 @@ function showCurrentLocationWeather(response) {
   );
   let currentPositionWindSpeed = document.querySelector("#wind-speed");
 
+  celsiusTemperature = response.data.main.temp;
+  celsiusMax = response.data.main.temp_max;
+  celsiusMin = response.data.main.temp_min;
+
   currentCityName.innerHTML = `${response.data.name}`;
   currentPositionTemp.innerHTML = Math.round(response.data.main.temp);
   currentPositionDescription.innerHTML = response.data.weather[0].description;
