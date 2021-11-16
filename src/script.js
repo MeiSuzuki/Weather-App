@@ -9,6 +9,8 @@ function showWeather(response) {
   let weatherIcon = document.querySelector("#weather-icon");
 
   celsiusTemperature = response.data.main.temp;
+  celsiusMax = response.data.main.temp_max;
+  celsiusMin = response.data.main.temp_min;
 
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   description.innerHTML = response.data.weather[0].description;
@@ -85,8 +87,14 @@ function getCurrentLocation(event) {
 function convertToF(event) {
   event.preventDefault();
   let fTemp = (celsiusTemperature * 9) / 5 + 32;
+  let fMaxTemp = (celsiusMax * 9) / 5 + 32;
+  let fMinTemp = (celsiusMin * 9) / 5 + 32;
   let currentTemp = document.querySelector("#current-temp");
+  let maxTemp = document.querySelector("#max-temp");
+  let minTemp = document.querySelector("#min-temp");
   currentTemp.innerHTML = Math.round(fTemp);
+  maxTemp.innerHTML = Math.round(fMaxTemp);
+  minTemp.innerHTML = Math.round(fMinTemp);
 }
 
 let now = new Date();
@@ -113,6 +121,8 @@ let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${week}, ${date} | ${hour}:${minute}`;
 
 let celsiusTemperature = null;
+let celsiusMax = null;
+let celsiusMin = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", showCity);
