@@ -7,6 +7,9 @@ function showWeather(response) {
   let humidityPercentage = document.querySelector("#humidity-percentage");
   let windSpeed = document.querySelector("#wind-speed");
   let weatherIcon = document.querySelector("#weather-icon");
+
+  celsiusTemperature = response.data.main.temp;
+
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   description.innerHTML = response.data.weather[0].description;
   maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
@@ -79,6 +82,13 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showCurrentLocation);
 }
 
+function convertToF(event) {
+  event.preventDefault();
+  let fTemp = (celsiusTemperature * 9) / 5 + 32;
+  let currentTemp = document.querySelector("#current-temp");
+  currentTemp.innerHTML = Math.round(fTemp);
+}
+
 let now = new Date();
 let weeks = [
   "Sunday",
@@ -102,8 +112,13 @@ if (minute < 10) {
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${week}, ${date} | ${hour}:${minute}`;
 
+let celsiusTemperature = null;
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", showCity);
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentLocation);
+
+let fConverter = document.querySelector("#fahrenheit-temp-unit");
+fConverter.addEventListener("click", convertToF);
