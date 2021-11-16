@@ -88,13 +88,15 @@ function convertToF(event) {
   event.preventDefault();
   let fTemp = (celsiusTemperature * 9) / 5 + 32;
   let fMaxTemp = (celsiusMax * 9) / 5 + 32;
+  fMaxTemp = Math.round(fMaxTemp);
   let fMinTemp = (celsiusMin * 9) / 5 + 32;
+  fMinTemp = Math.round(fMinTemp);
   let currentTemp = document.querySelector("#current-temp");
   let maxTemp = document.querySelector("#max-temp");
   let minTemp = document.querySelector("#min-temp");
   currentTemp.innerHTML = Math.round(fTemp);
-  maxTemp.innerHTML = `${Math.round(fMaxTemp)}°`;
-  minTemp.innerHTML = `${Math.round(fMinTemp)}°`;
+  maxTemp.innerHTML = `${fMaxTemp}°`;
+  minTemp.innerHTML = `${fMinTemp}°`;
 }
 
 let now = new Date();
