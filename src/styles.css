@@ -63,6 +63,15 @@ section .weather .todaysWeather {
   text-align: center;
 }
 
+.todaysWeather .deactive {
+  color: black;
+  cursor: default;
+}
+
+.todaysWeather .deactive:hover {
+  text-decoration: none;
+}
+
 .temperature {
   font-size: 58px;
   display: inline-block;

@@ -98,6 +98,8 @@ function convertToF(event) {
   let currentTemp = document.querySelector("#current-temp");
   let maxTemp = document.querySelector("#max-temp");
   let minTemp = document.querySelector("#min-temp");
+  cConverter.classList.remove("deactive");
+  fConverter.classList.add("deactive");
   currentTemp.innerHTML = Math.round(fTemp);
   maxTemp.innerHTML = `${fMaxTemp}°`;
   minTemp.innerHTML = `${fMinTemp}°`;
@@ -108,6 +110,8 @@ function convertToC(event) {
   let currentTemp = document.querySelector("#current-temp");
   let maxTemp = document.querySelector("#max-temp");
   let minTemp = document.querySelector("#min-temp");
+  cConverter.classList.add("deactive");
+  fConverter.classList.remove("deactive");
   currentTemp.innerHTML = Math.round(celsiusTemperature);
   maxTemp.innerHTML = `${Math.round(celsiusMax)}°`;
   minTemp.innerHTML = `${Math.round(celsiusMin)}°`;
