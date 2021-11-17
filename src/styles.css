@@ -65,11 +65,12 @@ section .weather .todaysWeather {
 
 .todaysWeather .deactive {
   color: black;
-  cursor: default;
+  text-decoration: none;
 }
 
 .todaysWeather .deactive:hover {
   text-decoration: none;
+  cursor: default;
 }
 
 .temperature {
