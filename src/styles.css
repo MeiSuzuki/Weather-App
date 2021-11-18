@@ -115,7 +115,7 @@ section ul {
   padding: 0;
 }
 
-section .futureWeather .future {
+section .weatherForecast .forecast {
   display: inline-block;
   margin: 0 15px;
   padding: 5px 12px;
@@ -125,21 +125,21 @@ section .futureWeather .future {
   transition: all 200ms ease-in-out;
 }
 
-section .futureWeather .future:hover {
+section .weatherForecast .forecast:hover {
   background: #eaf5e9;
   padding: 10px 20px;
 }
 
-section .futureWeather .dayOfWeek {
+section .weatherForecast .dayOfWeek {
   font-size: 33px;
   font-weight: lighter;
 }
 
-section .futureWeather .futureIcon {
+section .weatherForecast .forecastIcon {
   width: 40px;
 }
 
-section .futureWeather .future small {
+section .weatherForecast .forecast small {
   font-size: 12px;
 }
 
