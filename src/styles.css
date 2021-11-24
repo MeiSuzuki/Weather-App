@@ -110,11 +110,6 @@ section .card-body .weather {
   margin-bottom: 30px;
 }
 
-section ul {
-  list-style: none;
-  padding: 0;
-}
-
 section .weatherForecast .forecast {
   display: inline-block;
   margin: 0 15px;
@@ -127,7 +122,7 @@ section .weatherForecast .forecast {
 
 section .weatherForecast .forecast:hover {
   background: #eaf5e9;
-  padding: 10px 20px;
+  padding: 5px 12px;
 }
 
 section .weatherForecast .dayOfWeek {
@@ -141,6 +136,10 @@ section .weatherForecast .forecastIcon {
 
 section .weatherForecast .forecast small {
   font-size: 12px;
+}
+
+section .weatherForecast .forecast small .forecast-min-temp {
+  color: #6f7273;
 }
 
 footer {
