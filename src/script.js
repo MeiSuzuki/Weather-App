@@ -1,3 +1,25 @@
+function showForecast() {
+  let forecast = document.querySelector("#weatherForecast");
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-2 forecast">
+        <div class="dayOfWeek">Tue</div>
+        <img
+          src="images/sunnyCloud.svg"
+          alt="Mostly Sunny"
+          class="forecastIcon"
+        />
+        <br />
+        <small>
+          27°/ <span class="forecast-min-temp">20°</span>
+        </small>
+      </div>
+    `;
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   console.log(response.data);
   let currentTemp = document.querySelector("#current-temp");
@@ -7,6 +29,8 @@ function showWeather(response) {
   let humidityPercentage = document.querySelector("#humidity-percentage");
   let windSpeed = document.querySelector("#wind-speed");
   let weatherIcon = document.querySelector("#weather-icon");
+
+  showForecast();
 
   celsiusTemperature = response.data.main.temp;
   celsiusMax = response.data.main.temp_max;
